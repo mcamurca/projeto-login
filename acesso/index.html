@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ-005</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/media-query.css">
+
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>SITE DE ACESSO LOGIN</h1>
+        <i id="burguer"  class="material-icons" onclick="clickMenu()">menu</i >
+        <menu id="itens">
+            <ul>
+                <li><a href="curriculo.html">Currículo</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="redes-sociais.html">Redes Sociais</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="ajuda.html">Ajuda</a></li>
+                <li><a href="../index.html">Sair</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h1>Media Queries CSS: Adaptando seu Design para Todos os Dispositivos</h1>
+
+            <h2>Introdução</h2>
+
+            <p>Com o crescente uso de smartphones, tablets e uma ampla variedade de dispositivos com acesso à internet, é essencial que os sites sejam responsivos e se adaptem a diferentes tamanhos de tela. A técnica das Media Queries CSS desempenha um papel fundamental nesse aspecto, permitindo que os designers criem layouts flexíveis e amigáveis para todos os dispositivos. Neste artigo, exploraremos as Media Queries CSS e como elas podem ser usadas para criar designs adaptáveis e oferecer uma experiência consistente aos usuários em qualquer dispositivo.</p>
+
+            <h2>O que são Media Queries CSS?</h2>
+
+            <p>As Media Queries CSS são uma funcionalidade do CSS que permite aplicar estilos específicos com base nas características do dispositivo de visualização, como a largura da tela, altura, orientação e até mesmo recursos como resolução e densidade de pixels. Com as Media Queries, é possível segmentar diferentes dispositivos e fornecer uma experiência de usuário personalizada para cada um deles.</p>
+
+            <h2>Criando pontos de interrupção responsivos</h2>
+
+            <p>O conceito-chave nas Media Queries é o uso de pontos de interrupção (breakpoints) para definir quando certos estilos devem ser aplicados. Esses pontos de interrupção são baseados na largura da tela e determinam quando o design precisa ser ajustado para se adaptar à visualização em dispositivos menores.</p>
+
+            <p>Por exemplo, suponha que você queira que seu design seja exibido de forma ideal em telas de desktop, tablets e smartphones. Você pode definir os seguintes pontos de interrupção:</p>
+
+            <ul>
+                <li>Telas de desktop: acima de 1024px de largura.</li>
+                <li>Tablets: entre 768px e 1023px de largura.</li>
+                <li>Smartphones: abaixo de 767px de largura.</li>
+            </ul>
+
+            <p><b>Exemplo prático</b></p>
+
+            <div id="imagem">
+
+            </div>
+
+            <p>Nesse exemplo, temos estilos padrão para todos os dispositivos. Em seguida, usamos Media Queries para definir estilos específicos para cada ponto de interrupção. Dependendo da largura da tela, o plano de fundo, o espaçamento e outros estilos serão ajustados adequadamente.</p>
+
+            <h2>Benefícios das Media Queries CSS</h2>
+
+            <p>As Media Queries CSS oferecem diversos benefícios para os designers e usuários:</p>
+
+            <ul>
+                <li>Design responsivo: Com as Media Queries, é possível criar designs que se adaptam automaticamente a diferentes tamanhos de tela, garantindo que o conteúdo seja legível e que a experiência do usuário seja agradável, independentemente do dispositivo utilizado.</li>
+
+                <li>Consistência da marca: Ao usar Media Queries, você pode garantir</li>
+            </ul>
+        </article>
+    </main>
+
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+
+    <footer>
+        <p>Estrutura de login desenvolvida por <a href="https://github.com/mcamurca" target="_blank">Michales Camurça</a> para praticas de HTML5 e Media Queries CSS</p>
+    </footer>
+    
+</body>
+</html>
